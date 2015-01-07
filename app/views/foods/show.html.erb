@@ -7,5 +7,14 @@
   <p>Content: <%= @post.content %></p>
 
 	<p><a href="/foods/edit/<%= @post.id %>">Edit</a> | <a href="/foods/delete_complete/<%= @post.id %>">Delete</a></p>
+	<hr>
+	<% @post.comments.each do |comment| %>
+	<p><strong>Username</strong> <%= comment.content %></p>
+	<% end %>
+
+	<form action="/foods/write_comment_complete" method="post">
+		<input type="hidden" name="post_id" value="<%= @post.id %>">
+		<p>Author name: <input type="text" name="comment_content" placeholder="Write a comment."> <input type="submit" value="Comment"></p> 
+	</form>
   <p><a href="/">Go to full list</a></p>
 </div>
