@@ -39,5 +39,8 @@ class UsersController < ApplicationController
   end
 
   def logout_complete
+		reset_session
+		flash[:alert]="Successfully logged out."
+		redirect_to "/"
   end
 end
