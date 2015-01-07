@@ -57,5 +57,9 @@ class FoodsController < ApplicationController
   end
 
   def delete_complete
+		post=Post.find(params[:id])
+		post.destroy
+		flash[:alert] = "Deleted successfully."
+		redirect_to "/"
   end
 end

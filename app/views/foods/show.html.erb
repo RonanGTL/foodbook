@@ -6,6 +6,6 @@
   <p style="color: #ff0000">Category: <%= @post.category %></p>
   <p>Content: <%= @post.content %></p>
 
-	<p><a href="/foods/edit/<%= @post.id %>">Edit</a></p>
+	<p><a href="/foods/edit/<%= @post.id %>">Edit</a> | <a href="/foods/delete_complete/<%= @post.id %>">Delete</a></p>
   <p><a href="/">Go to full list</a></p>
 </div>
