@@ -2,6 +2,7 @@
 <h2>Restaurant information</h2>
 
 <div style="border: 1px solid #ffffff">
+	<p><img src="<%= @post.image_url(:medium) %>"></p>
   <h4>Title: <%= @post.title %></h4>
   <p style="color: #ff0000">Category: <%= @post.category %></p>
   <p>Content: <%= @post.content %></p>
