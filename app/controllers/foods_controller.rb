@@ -4,6 +4,17 @@ class FoodsController < ApplicationController
   end
 
   def posts_category
+		case params[:category]
+		when "asian"
+			@category= "Asian"
+		when "american"
+			@category= "American"
+		when "european"
+			@category ="European"
+		else
+			@category = "International"
+		end
+		@posts=Post.where(category: @category)
   end
 
   def show
