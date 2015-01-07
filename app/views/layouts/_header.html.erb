@@ -1,7 +1,23 @@
-<h4><a href="/">Foodbook Restaurants Reviews</a> || <a href="/asian">Asian</a> | <a href="/american">American</a> | <a href="/european">European</a> | <a href="/international">International</a> || <a href="/foods/write">Post</a> || 
-<% if session[:user_id].nil? %>
-<a href="/users/signup">Sign up</a> | <a href="/users/login">Log in</a>
-<% else %>
-<a href="/users/logout_complete">Log out</a>
-<% end %>
-</h4>
+<div class="container">
+	<h1 class="foodbook-title"><a class="foodbook-title-link" href="/">Foodbook Restaurants Reviews</a></h1>
+</div>
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <ul class="nav navbar-nav navbar-left">
+			<li><a href="/asian">Asian</a></li>
+			<li><a href="/american">American</a></li>
+			<li><a href="/european">European</a></li>
+			<li><a href="/international">International</a></li>
+			<li><a href="/foods/write">Post</a></li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+	 		<% if session[:user_id].nil? %>
+			<li><a href="/users/signup">Sign up</a></li>
+			<li><a href="/users/login">Log in</a></li>
+			<% else %>
+			<li><a href="/users/logout_complete">Log out</a></li>
+			<% end %>
+		</ul>
+	</div>
+</nav>

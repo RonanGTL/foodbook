@@ -1,10 +1,14 @@
-<%= flash[:alert] %>
+<div class="container">
+	<% if !flash[:alert].nil? %>
+	<div class="alert alert-danger">
+		<%= flash[:alert] %>
+	</div>
+	<% end %>
 
-<div>
-  <h2>Welcome to Foodbook : Restaurants Reviews</h2>
-  <p>Share and Discover Perfect Restaurant Around You </p>
+	<div class="well text-center">
+  	<h3>Welcome to Foodbook : Restaurants Reviews</h3>
+  	<p>Share and Discover Perfect Restaurant Around You </p>
+	</div>
+
+	<%= render :partial => "foods/posts" %>
 </div>
-
-<hr>
-
-<%= render :partial => "foods/posts" %>
