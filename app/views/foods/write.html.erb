@@ -1,2 +1,15 @@
-<h1>Foods#write</h1>
-<p>Find me in app/views/foods/write.html.erb</p>
+<p><%= flash[:alert] %></p>
+<h2>Add restaurant</h2>
+
+<form action="/foods/write_complete" method="post">
+	<p style="color: #ff0000">Category:
+	<select name="post_category">
+    <option value="Asian">Asian</option>
+    <option value="American">American</option>
+    <option value="European">European</option>
+    <option value="International">International</option>
+  </select></p>
+  <p>Title: <input type="text" name="post_title" placeholder="Enter the title."></p>
+  <p>Content: <textarea name="post_content" placeholder="Enter the detail."></textarea></p>
+  <input type="submit" value="Add">
+</form>
