@@ -1,0 +1,18 @@
+<h4><a href="#">Foodbook Restaurants Reviews</a> || <a href="#">Asian</a> | <a href="#">American</a> | <a href="#">European</a> | <a href="#">Internatioanl</a></h4>
+
+<div>
+  <h2>Welcome to Foodbook : Restaurant Reviews</h2>
+  <p>Share and Discover Perfect Restaurant Around You </p>
+</div>
+
+<hr>
+
+<% @posts.reverse.each do |post| %>
+<div style="border: 1px solid #ffffff">
+  <h4><%= post.title %></h4>
+  <p style="color: #ff0000"><%= post.category %></p>
+  <p>Author name</p>
+  <p><%= post.content %></p>
+</div>
+<% end %>
+
